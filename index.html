@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CyberShield Dashboard | AI Personal Security</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <span class="shield">🛡️</span>
+      <h1>CyberShield</h1>
+    </div>
+    <p class="tagline">AI-Powered Personal Security Dashboard</p>
+  </header>
+
+  <main>
+    <section class="dashboard">
+      <div class="card overview">
+        <h2>Security Overview</h2>
+        <div class="score-circle" id="scoreCircle">
+          <span id="scoreValue">85</span>
+          <small>Security Score</small>
+        </div>
+        <p>Your personal defenses are strong. Run checks below to improve.</p>
+      </div>
+
+      <div class="tools">
+        <div class="card tool">
+          <h3>🔐 Password Strength</h3>
+          <input type="password" id="passwordInput" placeholder="Enter a password to test...">
+          <div class="strength-bar"><div id="strengthFill"></div></div>
+          <p id="strengthText">Type a password to analyze</p>
+          <ul id="passwordTips"></ul>
+        </div>
+
+        <div class="card tool">
+          <h3>🎣 Phishing URL Checker</h3>
+          <input type="text" id="urlInput" placeholder="Paste a suspicious URL...">
+          <button id="checkUrlBtn">Analyze URL</button>
+          <div id="urlResult" class="result"></div>
+        </div>
+      </div>
+
+      <div class="card tips">
+        <h2>💡 Security Tips</h2>
+        <div id="tipsList"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Built for personal defense • Open source on <a href="https://github.com/MrAffordableAI/CyberShield-Dashboard" target="_blank">GitHub</a></p>
+    <p class="disclaimer">Client-side heuristics only. Not a substitute for professional security tools.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
