@@ -1,30 +1,28 @@
-# CyberShield Dashboard
+# CyberShield — Personal Security Platform
 
-AI-powered personal security dashboard with:
-
-- **Password Strength Analyzer** — real-time entropy and pattern checks
-- **Phishing URL Checker** — heuristic analysis for common attack indicators
-- **Security Tips** — practical daily defenses
+Holistic, transparent personal security coach designed for real people (not just security professionals).
 
 ## Live Demo
-
 **https://mraffordableai.github.io/CyberShield-Dashboard/**
 
-Open the link above on any device. No install required.
+## What it does
+- Dynamic Security Score that improves as you use the tools
+- Password Coach with specific feedback
+- Phishing URL analyzer (heuristic red-flag detection)
+- Device hygiene & privacy audit checklists
+- Practical guides and tips
+- Clear freemium positioning (Individual $4.99/mo · Family $9.99/mo)
 
-## Features
+## Why it exists
+Most people juggle multiple security apps and still get phished. CyberShield aims to be the simple, educational layer that covers the whole digital life — free for core protection, premium for continuous monitoring and family use. The open core stays free so more people can reduce their risk.
 
-- Fully client-side (your data never leaves your browser)
-- Clean, modern dark UI
-- Instant feedback
+## Features in this demo
+- Fully client-side (data stays in your browser)
+- Score persisted locally
 - Mobile-friendly
+- Premium plans shown as product framing (not yet connected to payments)
 
 ## Disclaimer
-
-This tool uses client-side heuristics for educational and personal awareness purposes. It is **not** a replacement for enterprise security products, antivirus, or professional judgment.
-
-## Tech
-
-Pure HTML, CSS, and JavaScript. No frameworks, no backend, no tracking.
+Client-side heuristics for education and awareness. Not a replacement for enterprise security products, antivirus, or professional judgment. Premium features are simulated.
 
 Built under the MrAffordableAI project series.

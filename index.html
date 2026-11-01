@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CyberShield Dashboard | AI Personal Security</title>
+  <title>CyberShield | Personal Security Platform</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>">
 </head>
@@ -11,49 +11,98 @@
   <header>
     <div class="logo">
       <span class="shield">🛡️</span>
-      <h1>CyberShield</h1>
+      <div>
+        <h1>CyberShield</h1>
+        <p class="tagline">Your personal security coach</p>
+      </div>
     </div>
-    <p class="tagline">AI-Powered Personal Security Dashboard</p>
+    <button class="premium-btn" id="premiumBtn">Upgrade to Premium</button>
   </header>
 
   <main>
-    <section class="dashboard">
-      <div class="card overview">
-        <h2>Security Overview</h2>
-        <div class="score-circle" id="scoreCircle">
-          <span id="scoreValue">85</span>
-          <small>Security Score</small>
-        </div>
-        <p>Your personal defenses are strong. Run checks below to improve.</p>
+    <!-- Score Hero -->
+    <section class="score-hero card">
+      <div class="score-circle" id="scoreCircle">
+        <span id="scoreValue">72</span>
+        <small>Security Score</small>
+      </div>
+      <div class="score-info">
+        <h2>Your Digital Life Score</h2>
+        <p id="scoreMessage">Run the tools below to raise your score and close gaps.</p>
+        <div class="score-breakdown" id="scoreBreakdown"></div>
+      </div>
+    </section>
+
+    <!-- Tools Grid -->
+    <div class="tools-grid">
+      <!-- Password -->
+      <div class="card tool">
+        <h3>🔐 Password Coach</h3>
+        <input type="password" id="passwordInput" placeholder="Test a password...">
+        <div class="strength-bar"><div id="strengthFill"></div></div>
+        <p id="strengthText">Type to analyze</p>
+        <ul id="passwordTips"></ul>
       </div>
 
-      <div class="tools">
-        <div class="card tool">
-          <h3>🔐 Password Strength</h3>
-          <input type="password" id="passwordInput" placeholder="Enter a password to test...">
-          <div class="strength-bar"><div id="strengthFill"></div></div>
-          <p id="strengthText">Type a password to analyze</p>
-          <ul id="passwordTips"></ul>
-        </div>
-
-        <div class="card tool">
-          <h3>🎣 Phishing URL Checker</h3>
-          <input type="text" id="urlInput" placeholder="Paste a suspicious URL...">
-          <button id="checkUrlBtn">Analyze URL</button>
-          <div id="urlResult" class="result"></div>
-        </div>
+      <!-- Phishing -->
+      <div class="card tool">
+        <h3>🎣 Phishing Checker</h3>
+        <input type="text" id="urlInput" placeholder="Paste a suspicious URL...">
+        <button id="checkUrlBtn">Analyze</button>
+        <div id="urlResult" class="result"></div>
       </div>
 
-      <div class="card tips">
-        <h2>💡 Security Tips</h2>
-        <div id="tipsList"></div>
+      <!-- Device Hygiene -->
+      <div class="card tool">
+        <h3>📱 Device Hygiene</h3>
+        <div id="hygieneList"></div>
       </div>
+
+      <!-- Privacy -->
+      <div class="card tool">
+        <h3>🔒 Privacy Audit</h3>
+        <div id="privacyList"></div>
+      </div>
+    </div>
+
+    <!-- Premium Teaser -->
+    <section class="card premium-teaser" id="premiumSection">
+      <h2>Unlock Continuous Protection</h2>
+      <div class="plans">
+        <div class="plan">
+          <h3>Individual</h3>
+          <p class="price">$4.99<span>/mo</span></p>
+          <ul>
+            <li>Breach monitoring alerts</li>
+            <li>Personalized weekly reports</li>
+            <li>Deeper phishing analysis</li>
+            <li>Priority incident guides</li>
+          </ul>
+        </div>
+        <div class="plan featured">
+          <h3>Family</h3>
+          <p class="price">$9.99<span>/mo</span></p>
+          <ul>
+            <li>Everything in Individual</li>
+            <li>Up to 5 profiles</li>
+            <li>Shared family score</li>
+            <li>Parental guidance tools</li>
+          </ul>
+        </div>
+      </div>
+      <p class="benefit">Free forever for core tools. Premium funds ongoing protection for more people.</p>
+    </section>
+
+    <!-- Tips & Guides -->
+    <section class="card">
+      <h2>💡 Guides & Tips</h2>
+      <div id="tipsList"></div>
     </section>
   </main>
 
   <footer>
-    <p>Built for personal defense • Open source on <a href="https://github.com/MrAffordableAI/CyberShield-Dashboard" target="_blank">GitHub</a></p>
-    <p class="disclaimer">Client-side heuristics only. Not a substitute for professional security tools.</p>
+    <p>CyberShield — transparent personal security • <a href="https://github.com/MrAffordableAI/CyberShield-Dashboard" target="_blank">Open source core</a></p>
+    <p class="disclaimer">Client-side tools for education and awareness. Premium features are simulated in this demo. Not a substitute for professional security products.</p>
   </footer>
 
   <script src="script.js"></script>
