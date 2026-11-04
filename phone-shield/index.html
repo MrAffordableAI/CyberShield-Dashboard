@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'none'; connect-src 'none'; form-action 'none'; base-uri 'none'">
+<title>Phone Shield | Scam Rescue prototype</title>
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<header><div class="brand"><span class="mark" aria-hidden="true">◇</span><div><strong>Phone Shield</strong><small>Privacy-first scam rescue</small></div></div><span class="pill">Prototype · No device scan</span></header>
+<main>
+<section class="hero">
+<p class="eyebrow">SCAM RESCUE</p><h1>Think it's a scam? Check before you click.</h1>
+<p>Examine suspicious web addresses without opening them. Get reasons for concern and practical next steps. This tool cannot certify any link as safe.</p>
+</section>
+<section class="card" aria-labelledby="link-title">
+<h2 id="link-title">Analyze a suspicious link</h2>
+<label for="link-input">Website address</label><div class="formrow"><input id="link-input" type="text" maxlength="2048" spellcheck="false" autocomplete="off" autocapitalize="off" placeholder="example.com/verify"><button id="analyze" type="button">Analyze</button></div>
+<p class="muted">Don't paste passwords, codes, private messages, or banking details. The link is analyzed in this browser and is never visited or sent to a server.</p>
+<div id="analysis" class="result" role="status" aria-live="polite"><strong>Ready to analyze.</strong><p>Paste a web address to see a transparent, limited check.</p></div>
+</section>
+<div class="columns">
+<section class="card" aria-labelledby="checklist-title"><h2 id="checklist-title">Security setup checklist</h2><p class="muted">Self-reported only. Phone Shield cannot inspect your device settings from this page.</p>
+<p id="completion" class="counter" aria-live="polite">0 of 5 confirmed</p><div id="checks"></div><button id="reset" class="secondary" type="button">Reset checklist</button></section>
+<section class="card" aria-labelledby="rescue-title"><h2 id="rescue-title">I think I've been hacked</h2><p>Follow these steps from a trusted device when possible:</p>
+<ol><li>Stop interacting with the suspicious message or caller.</li><li>For financial fraud, contact your bank using its official app or a number on your card.</li><li>Secure your primary email and Apple/Google account; sign out unknown sessions and enable multifactor authentication.</li><li>Install official system updates and review unfamiliar apps and account recovery methods.</li><li>If money or identity information was stolen, report it to appropriate authorities and consider a credit freeze.</li></ol>
+<p class="muted">Do not rely on this checklist as proof your device is malware-free.</p>
+</section></div>
+<section class="card"><h2>Money Guard · Coming later</h2><p>Planned: explain fake investment offers, payment requests and impersonation warning signs. No real-time monitoring or bank integration exists yet.</p><h2>Family Guardian · Coming later</h2><p>Planned: consent-based sharing of suspicious items with a trusted contact. No tracking or message access is implemented.</p></section>
+</main>
+<footer>Phone Shield is a demonstration, not antivirus, a VPN, or a real-time threat intelligence service. No sign-in, analytics, payments or background monitoring.</footer>
+<script src="./security.js"></script><script src="./app.js"></script>
+</body></html>
