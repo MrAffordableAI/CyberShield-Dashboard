@@ -1,0 +1,26 @@
+name: Phone Shield focused checks
+on:
+  push:
+    paths:
+      - 'phone-shield/**'
+      - '.github/workflows/phone-shield.yml'
+  pull_request:
+    paths:
+      - 'phone-shield/**'
+      - '.github/workflows/phone-shield.yml'
+permissions:
+  contents: read
+jobs:
+  phone-shield-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Syntax check
+        run: |
+          node --check phone-shield/security.js
+          node --check phone-shield/app.js
+      - name: URL heuristics regression tests
+        run: node phone-shield/tests/security.test.cjs
